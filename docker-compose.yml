@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  node-web-app:
+    container_name: node-web-app
+    build: .
+    environment:
+      TEST: "echo 'test complete'"
+    ports:
+      - '49160:8080'
