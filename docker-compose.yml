@@ -7,4 +7,4 @@ services:
     environment:
       TEST: "echo 'test complete'"
     ports:
-      - '49160:8080'
+      - '49160:3000'
