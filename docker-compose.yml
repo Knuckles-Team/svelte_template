@@ -4,7 +4,11 @@ services:
   node-web-app:
     container_name: node-web-app
     build: .
+    command: npm run dev
+    working_dir: /app
     environment:
-      TEST: "echo 'test complete'"
+      - NODE_ENV=development
+      - PORT=5050
+      - HOST=0.0.0.0
     ports:
-      - '49160:3000'
+      - '35729:35729'
