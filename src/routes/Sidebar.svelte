@@ -17,6 +17,7 @@
 	}
 
 	.open {
+	  font-color: var(--color-font);
 		left: -80%;
 		text-align: right;
 		padding-right: 50;

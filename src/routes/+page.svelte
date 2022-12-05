@@ -20,9 +20,9 @@
 
 <style>
 	section {
+	  max-width: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		flex: 0.9;
 		background-color: #ffffff;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

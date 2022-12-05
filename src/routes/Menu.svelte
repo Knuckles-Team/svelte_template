@@ -3,3 +3,9 @@
   <a href="/about" class="hover:text-gray-700 hover:no-underline">About</a>
 	<a href="/contact" class="hover:text-gray-700 hover:no-underline">Contact</a>
 </nav>
+
+<style>
+	nav {
+		font-color: var(--color-font);
+	}
+</style>
