@@ -3,12 +3,14 @@ version: '3.8'
 services:
   node-web-app:
     container_name: node-web-app
-    build: .
-    command: npm run dev
-    working_dir: /app
+    build:
+      context: .
+      dockerfile: web_app.dockerfile
+    #command: npm run dev
+    #working_dir: /app
     environment:
       - NODE_ENV=development
-      - PORT=5050
+      - PORT=5173
       - HOST=0.0.0.0
     ports:
-      - '35729:35729'
+      - '5173:5173'

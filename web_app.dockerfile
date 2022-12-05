@@ -1,24 +1,22 @@
 FROM node:latest AS node
 WORKDIR /app
 RUN npm install -g npm@9.1.3
-RUN npm install -g vite
+RUN npm install -g vite @sveltejs/vite-plugin-svelte
 
 FROM node AS node_template
+WORKDIR /app
+RUN npm install vite @sveltejs/vite-plugin-svelte
 ARG APPLICATION="test"
 ARG HOST=0.0.0.0
-ARG PORT=5050
+ARG PORT=5173
 ENV APPLICATION=$APPLICATION
 ENV HOST=$HOST
 ENV PORT=$PORT
-#RUN npm create svelte@latest ${APPLICATION}
-COPY package.json package-lock.json ./
-RUN npm ci
-COPY . /app
+COPY . .
 RUN npm install
 RUN npm run build
-RUN npm prune --production
 EXPOSE $PORT
-CMD [ "node", "build" ]
+CMD [ "npm", "run", "dev" ]
 
 
 #FROM ubuntu:latest AS nodejs
@@ -27,7 +25,7 @@ CMD [ "node", "build" ]
 #RUN apt update && apt install -y nodejs
 #WORKDIR /app
 #RUN npm install -g npm@9.1.3
-#RUN npm install vite
+#RUN npm install -g vite
 #
 #FROM nodejs AS webapp
 #ARG APPLICATION="test"
