@@ -11,6 +11,8 @@
 	</main>
 
 	<footer>
+	  <br>
+	  <hr>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer>
 </div>
@@ -19,7 +21,7 @@
 	.app {
 		display: flex;
 		flex-direction: column;
-		min-height: 100vh;
+		min-height: 100%;
 	}
 
 	main {
@@ -27,9 +29,6 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
-		width: 100%;
-		max-width: 90rem;
-		margin: 0 auto;
 		box-sizing: border-box;
 	}
 
